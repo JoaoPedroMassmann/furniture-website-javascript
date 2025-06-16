@@ -1,0 +1,11 @@
+
+
+@media screen and (max-width: 1000px){
+    #banner1{
+    background-image: url(../IMG/banner1_100x617.jpg);
+    background-image: image-set(
+        url(../IMG/banners/banner1_1000x540.avif) type("image/avif"),
+        url(../IMG/banners/banner1_1000x540.jpg) type("image/jpeg")
+    );
+}
+}

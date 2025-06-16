@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #efefef;
+}
+
+main {
+    padding-top: 140px;
+    max-width: 1690px;
+    margin: auto;
+}
+
+h1{
+    font-family: "Kaisei HarunoUmi", 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.11rem;
+}
+
+p{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 1.19rem;
+}
+
+a{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #101010;
+    font-size: 1.19rem;
+}
+
+b{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.89rem;
+}
+
+header .logo_container{
+    display: flex;
+    align-items: center;
+}
+
+.banner{
+    max-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-size: cover;  /* Suporte legado */
+    -moz-background-size: cover;     /* Suporte legado mozilla*/
+    -o-background-size: cover;       /* Suporte legado opera*/
+    box-sizing: border-box;    
+    -webkit-box-sizing: border-box; /* Suporte legado */
+    -moz-box-sizing: border-box;    /* Suporte legado mozilla*/     
+    padding: 5vh 7vw;
+    margin: 60px auto;
+}
+
+#banner1{
+    background-image: url(../IMG/banners/banner1_1920x617.jpg); /*Fallback*/
+    background-image: image-set(
+        url(../IMG/banners/banner1_1920x617.avif) type("image/avif"),
+        url(../IMG/banners/banner1_1920x617.jpg) type("image/jpeg")
+    );
+    color: white;
+    font-size: 30px;
+}
+
+#banner2{
+    background-image: url(../IMG/banner2.jpg); /*Fallback*/
+    background-image: image-set(
+        url(../IMG/banners/banner2_1920x617.avif) type("image/avif"),
+        url(../IMG/banners/banner2_1920x617.jpg) type("image/jpeg")
+    );
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-size: 46.4px;
+}
+
+#banner2 h2{
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38.4px;
+}    
+
+.showcase_carousel{
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    margin: auto;
+}
+
+.showcase_carousel i, .product_carousel i{
+    height: 50px;
+    width: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    top: 40%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    position: absolute;
+}
+
+.showcase_carousel i:last-child, .product_carousel i:last-child{
+    right: 0px;
+}
+
+.showcase_carousel .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.showcase_carousel .carousel::-webkit-scrollbar{ /* Para navegadores com versoes antigas */
+    display: none;
+}
+
+.carousel.no_transition {
+    scroll-behavior: auto;
+}
+
+.showcase_carousel .carousel > div{
+    scroll-snap-align: start;
+    height: 423px;
+}
+
+.showcase_carousel .carousel.dragging > div{
+    cursor: grab;
+    user-select: none;
+}
+
+.showcase_carousel > div img{
+    inline-size: 100%;
+    height: 382px;
+    object-fit: cover;
+}
+
+.product_carousel{
+    position: relative;
+    width: 95%;
+    margin: auto;
+}
+
+.product_carousel .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 3.5);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.product_carousel .color_selector{
+    display: flex;
+    gap: 8px;
+}
+
+.product_carousel .color_selector label{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: black;
+    display: inline-block;
+}
+
+.product_display{
+    scroll-snap-align: start;
+}
+
+.product_display > div{
+    margin: 20px 0;
+}
+
+.product_display img{
+    inline-size: 100%;
+    min-height: 250px;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.product_image_wrapper{
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.product_carousel .carousel.dragging > div{
+    cursor: grab;
+    user-select: none;
+}
+
+@media screen and (max-width: 1220px){
+    .showcase_carousel .carousel{
+        grid-auto-columns: calc(100% / 3);;
+    }
+
+    .product_carousel .carousel{
+        grid-auto-columns: calc((100% / 2) - 12px);
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .showcase_carousel .carousel{
+        grid-auto-columns: calc(100% / 2);
+    }
+
+    .banner{
+        padding: 5vh 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #banner2{
+        background-image: url(../IMG/banner2.jpg);
+        display: block;
+        justify-content: center;
+        text-align: center;
+        font-size: 17.6px;
+    }
+
+    #banner2 h2{
+        font-family: "Inria Serif", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 24px;
+    }    
+
+}
+
+@media screen and (max-width: 500px){
+    .product_carousel .carousel{
+        grid-auto-columns: calc((100% / 1) - 12px);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .showcase_carousel .carousel{
+        grid-auto-columns: 100%;
+    }
+}

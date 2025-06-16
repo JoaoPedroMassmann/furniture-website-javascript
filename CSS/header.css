@@ -1,0 +1,143 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: #fff; 
+    transition: transform 0.3s ease-in-out;
+}
+
+header.hide {
+    transform: translateY(-89px);
+}
+
+header nav{
+    border-top: #101010 solid 1px;
+    padding: 10px 0;
+}
+
+header input{
+    width: 80%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+header nav ul{
+    display: flex;
+    width: 100%;
+}
+
+header nav ul li{
+    flex: 1;
+    text-align: center;
+}
+
+.menu_toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+header nav ul.nav_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+header nav ul.nav_links li a {
+    text-decoration: none;
+    color: #101010;
+    padding: 10px;
+    display: block;
+}
+
+.inner_header{
+    max-width: 1690px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.upper_header{
+    height: 60px;
+    width: 100%;
+    padding: 14px 0;
+}
+
+.upper_header > div{
+    display: flex;
+}
+
+.upper_header > div > div{
+    display: inline-block;
+    width: 33.33%; /* Caso o navegaor não suporte calc */
+    width: calc(100% / 3);
+}
+
+.header_info{
+    gap: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header_info a{
+    padding: 12px;
+    text-align: center;
+    height: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+}
+
+.header_info a:hover{
+    background-color: #404040;
+}
+
+header .logo_container{
+    justify-content: center;
+}
+
+header .logo_container h1{
+    height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .upper_header > div > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .menu_toggle {
+        display: block;
+    }
+
+    .nav_links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+    }
+
+    .nav_links li {
+        border-top: 1px solid #ccc;
+        text-align: left;
+        display: none; /* invisível por enquanto até implementar o javascript */
+    }
+
+    .nav_links li a {
+        padding: 15px;
+    }
+
+    .nav_links.show {
+        display: flex;
+    }
+}

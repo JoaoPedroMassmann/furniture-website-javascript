@@ -1,0 +1,124 @@
+.product_area{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    height: 656px;
+    margin: 60px auto; 
+}
+
+.product_display {
+    width: 50%;
+    height: 100%;
+}
+
+.product_display .main_display{
+    height: 540px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image_selector{
+    width: 100%;
+    overflow: hidden;
+    height: 70px;
+    height: auto;
+    display: grid;
+    grid-auto-flow: column;
+    height: 70px;
+    gap: 2px;
+    grid-template-columns: repeat(5, 1fr);
+    object-fit: cover;
+}
+
+.image_selector img{
+    height: 70px;
+    object-fit: cover;
+}
+
+.product_info{
+    width: 45%;
+    height: 100%;
+}
+
+.product_info p{
+    margin: 10px 0;
+}
+
+.product_info .product_categories p{
+    display: inline-block;
+}
+
+.product_info .product_categories b{
+    font-family: "Actor", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+.product_name{
+    border-bottom: black 1px solid;
+    padding-bottom: 15px;
+}
+
+.product_info .price {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.product_info .old_price {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.color_selector {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color_selector div {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.color_selector .selected { /* implementado futuramente com js */
+    outline: 3px solid #000;
+}
+
+.delivery_check input {
+    padding: 8px;
+    flex: 1;
+    border: 1px solid #333;
+}
+
+.product_code{
+    width: 100%;
+}
+
+.product_code b, .product_code p{
+    display: flex;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1230px){
+    .product_area{
+        display: block;
+        width: 85%;
+        justify-content: space-between;
+        height: auto;
+        margin: 60px auto; 
+    }
+
+    .product_display {
+        width: 100%;
+    }
+
+    .product_info{
+        width: 100%;
+    }
+}
