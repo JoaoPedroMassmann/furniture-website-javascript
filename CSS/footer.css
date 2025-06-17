@@ -3,9 +3,9 @@ footer{
     width: 100%;
 }
 
-footer a, footer p, footer b{
+footer a, footer p, footer b, footer i{
     font-family: "Inter", sans-serif;
-    font-size: 1rem;
+    font-size: var(--fs-sm);
     margin: 2px 0;
 }
 
@@ -18,8 +18,11 @@ footer a:hover{
     text-decoration: underline;
 }
 
-footer b{
+footer h2{
     margin: 10px 0;
+    font-weight: 590;
+    font-style: bold;
+    font-size: var(--fs-md);
 }
 
 footer .inner_footer{
@@ -56,19 +59,44 @@ footer .inner_footer .footer_info{
     grid-auto-flow: column;
     grid-auto-columns: calc(100% / 3 - 10%);
     gap: 10%;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-bottom: #101010 solid 1px;
 }
 
-footer .inner_footer .footer_info > div{
+footer .inner_footer .footer_info .contact > div{
     padding: 1% 5% 1% 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
 
+footer .inner_footer .footer_info .contact i{
+    margin-right: 2%;
+}
+
+footer .inner_footer .footer_info .contact > div{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .inner_footer .footer_info .payment_methods{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .inner_footer .footer_info .payment_methods img {
+    width: 40px;
+    height: auto;
 }
 
 footer .inner_footer .copyright_notice{
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+    padding: 10px 5px;
 }
 
 footer .inner_footer a i{

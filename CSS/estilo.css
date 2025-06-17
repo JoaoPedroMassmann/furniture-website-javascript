@@ -1,8 +1,19 @@
+:root {
+    --fs-sm: clamp(0.8rem, 0.34vi + 0.72rem, 0.98rem);
+    --fs-base: clamp(1rem, 0.57vi + 0.86rem, 1.31rem);
+    --fs-md: clamp(1.25rem, 0.91vi + 1.02rem, 1.75rem);
+    --fs-lg: clamp(1.56rem, 1.4vi + 1.21rem, 2.33rem);
+    --fs-xl: clamp(1.95rem, 2.1vi + 1.43rem, 3.11rem);
+    --fs-xxl: clamp(2.44rem, 3.1vi + 1.67rem, 4.14rem);
+    --fs-xxxl: clamp(3.05rem, 4.49vi + 1.93rem, 5.52rem);
+}
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    font-family: "Signika Negative", sans-serif;
 }
 
 body{
@@ -19,14 +30,28 @@ h1{
     font-family: "Kaisei HarunoUmi", 'Times New Roman', Times, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.11rem;
+    font-size: var(--fs-xl);
+}
+
+h2{
+    font-family: "Kaisei HarunoUmi", 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs-lg);
+}
+
+h3{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: var(--fs-md);
 }
 
 p{
     font-family: "Signika Negative", sans-serif;
     font-weight: 350;
     font-style: normal;
-    font-size: 1.19rem;
+    font-size: var(--fs-base);
 }
 
 a{
@@ -35,7 +60,7 @@ a{
     font-weight: 400;
     font-style: normal;
     color: #101010;
-    font-size: 1.19rem;
+    font-size: var(--fs-base);
 }
 
 b{
@@ -43,7 +68,7 @@ b{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 0.89rem;
+    font-size: var(--fs-sm);
 }
 
 header .logo_container{
@@ -215,7 +240,7 @@ header .logo_container{
 
 @media screen and (max-width: 1220px){
     .showcase_carousel .carousel{
-        grid-auto-columns: calc(100% / 3);;
+        grid-auto-columns: calc(100% / 3);
     }
 
     .product_carousel .carousel{
