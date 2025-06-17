@@ -60,6 +60,7 @@ header nav ul.nav_links li a {
 }
 
 .inner_header{
+    width: 95%;
     max-width: 1690px;
     height: 100%;
     display: block;
