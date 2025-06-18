@@ -12,10 +12,10 @@
                 "avif": "IMG/sofas/sofa1_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
@@ -30,10 +30,10 @@
                 "avif": "IMG/sofas/sofa2_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
@@ -48,10 +48,10 @@
                 "avif": "IMG/sofas/sofa3_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
@@ -66,10 +66,10 @@
                 "avif": "IMG/sofas/sofa4_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
@@ -84,10 +84,10 @@
                 "avif": "IMG/sofas/sofa5_900x413.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         }
     ],
@@ -96,85 +96,85 @@
             "id": 1,
             "tag": "Naturally Sourced",
             "name": "Araucaria Chair",
-            "price_range": "$1.120",
+            "priceRange": "$1.120",
             "images": {
                 "fallback": "IMG/chairs/chair1_900x600_ultrasmall.jpg",
                 "main": "IMG/chairs/chair1_900_600.jpg",
                 "avif": "IMG/chairs/chair1_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
             "id": 2,
             "tag": "Naturally Sourced",
             "name": "Ipê Chair",
-            "price_range": "$600 - $900",
+            "priceRange": "$600 - $900",
             "images": {
                 "fallback": "IMG/chairs/chair1_900x600_ultrasmall.jpg",
                 "main": "IMG/chairs/chair1_900_600.jpg",
                 "avif": "IMG/chairs/chair1_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
             "id": 3,
             "tag": "Naturally Sourced",
             "name": "Carnaúba Chair",
-            "price_range": "$1.900 - $2.400",
+            "priceRange": "$1.900 - $2.400",
             "images": {
                 "fallback": "IMG/chairs/chair3_900x600_ultrasmall.jpg",
                 "main": "IMG/chairs/chair3_900_600.jpg",
                 "avif": "IMG/chairs/chair3_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
             "id": 4,
             "tag": "Carnaúba Sourced",
             "name": "Pitanga Chair",
-            "price_range": "$1.900 - $2.400",
+            "priceRange": "$1.900 - $2.400",
             "images": {
                 "fallback": "IMG/chairs/chair4_900x600_ultrasmall.jpg",
                 "main": "IMG/chairs/chair4_900_600.jpg",
                 "avif": "IMG/chairs/chair4_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         },
         {
-            "id": 2,
+            "id": 5,
             "tag": "Carnaúba Sourced",
             "name": "Açai Chair",
-            "price_range": "$1.900 - $2.400",
+            "priceRange": "$1.900 - $2.400",
             "images": {
                 "fallback": "IMG/chairs/chair2_900x600_ultrasmall.jpg",
                 "main": "IMG/chairs/chair2_900_600.jpg",
-                "avif": "IMG/chairs/cahri2_900x600.avif"
+                "avif": "IMG/chairs/chair2_900x600.avif"
             },
             "colors": [
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif",
-                "../IMG/colors/sofa1beige.avif"
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif",
+                "/IMG/colors/sofa1beige.avif"
             ]
         }
     ]

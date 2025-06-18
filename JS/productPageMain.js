@@ -12,7 +12,7 @@ window.onload = async () => {
         const products = await response.json();
 
         if(products[category]){
-            const product = products[category].find(p => p.id == productId);
+            const product = products[category].find(p => p.id === productId);
 
             if(product) {
                 renderProductPage(product);
