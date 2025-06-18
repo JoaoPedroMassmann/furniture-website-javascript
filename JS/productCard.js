@@ -1,6 +1,12 @@
-export function createProductCard(product){
+export function createProductCard(product, category){
     const productDiv = document.createElement("div");
     productDiv.className = "product_display";
+    productDiv.style.cursor = "pointer";
+
+    //evento de clique
+    productDiv.addEventListener("click", () => {
+        window.location.href = `product.html?id=${product.id}&category=${category}`;
+    })
 
     //wrapper
     const imageWrapper = document.createElement("div");
