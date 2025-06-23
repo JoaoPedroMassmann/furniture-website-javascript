@@ -2,93 +2,64 @@
     "sofas": [
         {
             "id": 1,
-            "tag": "handmade",
+            "tag": "Handmade",
             "name": "Caxias Sofa",
             "dimensions": "(80\")",
-            "priceRange": "$1.999 - $2.799",
+            "priceNormal": 2799,
+            "pricePromo": 1799,
+            "description": "A nature-inspired sofa made with all-natural materials",
+            "code": "1203923",
             "images": {
-                "fallback": "IMG/sofas/sofa1_900x413_ultrasmall.jpg",
-                "main": "IMG/sofas/sofa1_900x413.jpg",
-                "avif": "IMG/sofas/sofa1_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
+                "main": "IMG/sofas/sofa1_900x600.jpg",
+                "avif": "IMG/sofas/sofa1_900x600.avif",
+                "gallery": [
+                    {"main": "IMG/sofas/sofa1_900x600.jpg", "avif": "IMG/sofas/sofa1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt1_900x600.jpg", "avif": "IMG/sofas/sofa1_alt1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt2_900x600.jpg", "avif": "IMG/sofas/sofa1_alt2_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt3_900x600.jpg", "avif": "IMG/sofas/sofa1_alt3_900x600.avif"}
+                ]
+            }
         },
         {
             "id": 2,
-            "tag": "handmade",
+            "tag": "Handmade",
             "name": "Fortaleza Sectional",
-            "dimensions": "(76\"-107\")",
-            "priceRange": "$2.999 - $4.680",
+            "dimensions": "(76\")",
+            "priceNormal": 2799,
+            "pricePromo": 1799,
+            "description": "A nature-inspired sofa made with all-natural materials",
+            "code": "1203923",
+            
             "images": {
-                "fallback": "IMG/sofas/sofa2_900x413_ultrasmall.jpg",
                 "main": "IMG/sofas/sofa1_900x413.jpg",
-                "avif": "IMG/sofas/sofa2_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
+                "avif": "IMG/sofas/sofa1_900x600.avif",
+                "gallery": [
+                    {"main": "IMG/sofas/sofa1_900x600.jpg", "avif": "IMG/sofas/sofa1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt1_900x600.jpg", "avif": "IMG/sofas/sofa1_alt1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt2_900x600.jpg", "avif": "IMG/sofas/sofa1_alt2_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt3_900x600.jpg", "avif": "IMG/sofas/sofa1_alt3_900x600.avif"}
+                ]
+            }
         },
         {
             "id": 3,
-            "tag": "handmade",
+            "tag": "Handmade",
             "name": "Erechim sofa",
-            "dimensions": "(85\"-102\")",
-            "priceRange": "$2.999 - $4.680",
+            "dimensions": "(85\")",
+            "priceNormal": 2799,
+            "pricePromo": 1799,
+            "description": "A nature-inspired sofa made with all-natural materials",
+            "code": "1203923",
             "images": {
-                "fallback": "IMG/sofas/sofa3_900x413_ultrasmall.jpg",
                 "main": "IMG/sofas/sofa1_900x413.jpg",
-                "avif": "IMG/sofas/sofa3_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
-        },
-        {
-            "id": 4,
-            "tag": "handmade",
-            "name": "Chapecó Sofa",
-            "dimensions": "(71\")",
-            "priceRange": "$1.799 - $1.899",
-            "images": {
-                "fallback": "IMG/sofas/sofa1_900x413_ultrasmall.jpg",
-                "main": "IMG/sofas/sofa1_900x413.jpg",
-                "avif": "IMG/sofas/sofa4_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
-        },
-        {
-            "id": 5,
-            "tag": "handmade",
-            "name": "Iguaçu Sofa",
-            "dimensions": "(92\")",
-            "priceRange": "$3.999",
-            "images": {
-                "fallback": "IMG/sofas/sofa5_900x413_ultrasmall.jpg",
-                "main": "IMG/sofas/sofa1_900x413.jpg",
-                "avif": "IMG/sofas/sofa5_900x413.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
+                "avif": "IMG/sofas/sofa1_900x600.avif",
+                "gallery": [
+                    {"main": "IMG/sofas/sofa1_900x600.jpg", "avif": "IMG/sofas/sofa1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt1_900x600.jpg", "avif": "IMG/sofas/sofa1_alt1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt2_900x600.jpg", "avif": "IMG/sofas/sofa1_alt2_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt3_900x600.jpg", "avif": "IMG/sofas/sofa1_alt3_900x600.avif"}
+                ]
+            }
         }
     ],
     "chairs": [
@@ -96,86 +67,61 @@
             "id": 1,
             "tag": "Naturally Sourced",
             "name": "Araucaria Chair",
-            "priceRange": "$1.120",
+            "dimensions": "(24\")",
+            "priceNormal": 2799,
+            "pricePromo": 1799,
+            "description": "A nature-inspired chair made with all-natural materials",
+            "code": "1203923",
             "images": {
-                "fallback": "IMG/chairs/chair1_900x600_ultrasmall.jpg",
-                "main": "IMG/chairs/chair1_900_600.jpg",
-                "avif": "IMG/chairs/chair1_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
+                "main": "IMG/sofas/sofa1_900x413.jpg",
+                "avif": "IMG/sofas/sofa1_900x600.avif",
+                "gallery": [
+                    {"main": "IMG/sofas/sofa1_900x600.jpg", "avif": "IMG/sofas/sofa1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt1_900x600.jpg", "avif": "IMG/sofas/sofa1_alt1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt2_900x600.jpg", "avif": "IMG/sofas/sofa1_alt2_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt3_900x600.jpg", "avif": "IMG/sofas/sofa1_alt3_900x600.avif"}
+                ]
+            }
         },
         {
             "id": 2,
             "tag": "Naturally Sourced",
             "name": "Ipê Chair",
-            "priceRange": "$600 - $900",
+            "dimensions": "(34\")",
+            "priceNormal": 2799,
+            "pricePromo": 1799,
+            "description": "A nature-inspired chair made with all-natural materials",
+            "code": "1203923",
             "images": {
-                "fallback": "IMG/chairs/chair1_900x600_ultrasmall.jpg",
-                "main": "IMG/chairs/chair1_900_600.jpg",
-                "avif": "IMG/chairs/chair1_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
+                "main": "IMG/sofas/sofa1_900x413.jpg",
+                "avif": "IMG/sofas/sofa1_900x600.avif",
+                "gallery": [
+                    {"main": "IMG/sofas/sofa1_900x600.jpg", "avif": "IMG/sofas/sofa1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt1_900x600.jpg", "avif": "IMG/sofas/sofa1_alt1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt2_900x600.jpg", "avif": "IMG/sofas/sofa1_alt2_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt3_900x600.jpg", "avif": "IMG/sofas/sofa1_alt3_900x600.avif"}
+                ]
+            }
         },
         {
             "id": 3,
             "tag": "Naturally Sourced",
             "name": "Carnaúba Chair",
-            "priceRange": "$1.900 - $2.400",
+            "dimensions": "(30\")",
+            "priceNormal": 2799,
+            "pricePromo": 1799,
+            "description": "A nature-inspired chair made with all-natural materials",
+            "code": "1203923",
             "images": {
-                "fallback": "IMG/chairs/chair3_900x600_ultrasmall.jpg",
-                "main": "IMG/chairs/chair3_900_600.jpg",
-                "avif": "IMG/chairs/chair3_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
-        },
-        {
-            "id": 4,
-            "tag": "Carnaúba Sourced",
-            "name": "Pitanga Chair",
-            "priceRange": "$1.900 - $2.400",
-            "images": {
-                "fallback": "IMG/chairs/chair4_900x600_ultrasmall.jpg",
-                "main": "IMG/chairs/chair4_900_600.jpg",
-                "avif": "IMG/chairs/chair4_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
-        },
-        {
-            "id": 5,
-            "tag": "Carnaúba Sourced",
-            "name": "Açai Chair",
-            "priceRange": "$1.900 - $2.400",
-            "images": {
-                "fallback": "IMG/chairs/chair2_900x600_ultrasmall.jpg",
-                "main": "IMG/chairs/chair2_900_600.jpg",
-                "avif": "IMG/chairs/chair2_900x600.avif"
-            },
-            "colors": [
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif",
-                "/IMG/colors/sofa1beige.avif"
-            ]
+                "main": "IMG/sofas/sofa1_900x413.jpg",
+                "avif": "IMG/sofas/sofa1_900x600.avif",
+                "gallery": [
+                    {"main": "IMG/sofas/sofa1_900x600.jpg", "avif": "IMG/sofas/sofa1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt1_900x600.jpg", "avif": "IMG/sofas/sofa1_alt1_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt2_900x600.jpg", "avif": "IMG/sofas/sofa1_alt2_900x600.avif"},
+                    {"main": "IMG/sofas/sofa1_alt3_900x600.jpg", "avif": "IMG/sofas/sofa1_alt3_900x600.avif"}
+                ]
+            }
         }
     ]
 

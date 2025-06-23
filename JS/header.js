@@ -5,18 +5,18 @@ const headerHTML = `
             <div class="upper_header">
                 <div>
                     <div>
-                        <input type="text">
+                        <input type="text" placeholder="Search...">
                     </div>
                     <div>
                         <div class="logo_container">
-                        <h1>INSIGNIA</h1>
+                        <a href="index.html"><h1>INSIGNIA</h1></a>
                     </div>
                     </div>
                     <div>
                         <div class="header_info">
-                            <a href="#">Sign in</a>
-                            <a href="#">Register</a>
-                            <a href="#">Cart</a>
+                            <a href="login.html">Sign in</a>
+                            <a href="register.html">Register</a>
+                            <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>

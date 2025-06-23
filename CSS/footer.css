@@ -100,7 +100,7 @@ footer .inner_footer .copyright_notice{
 }
 
 footer .inner_footer a i{
-    font-size: 2rem;
+    font-size: var(--fs-md);
 }
 
 @media screen and (max-width: 600px){

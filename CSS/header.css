@@ -76,11 +76,12 @@ header nav ul.nav_links li a {
 
 .upper_header > div{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .upper_header > div > div{
     display: inline-block;
-    width: 33.33%; /* Caso o navegaor não suporte calc */
     width: calc(100% / 3);
 }
 
@@ -131,7 +132,7 @@ header .logo_container h1{
     .nav_links li {
         border-top: 1px solid #ccc;
         text-align: left;
-        display: none; /* invisível por enquanto até implementar o javascript */
+        display: none;
     }
 
     .nav_links li a {
@@ -140,5 +141,13 @@ header .logo_container h1{
 
     .nav_links.show {
         display: flex;
+    }
+
+    .header_info{
+        display: none;
+    }
+
+    header input{
+        display: none;
     }
 }

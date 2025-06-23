@@ -10,16 +10,16 @@ window.onload = async () =>{
         const products = await response.json();
 
         for (const category in products){
-            const carousel = document.querySelector(`.carousel[data-category="${category}"]`)
+            const displayArea = document.querySelector(`.products[data-category="${category}"]`)
 
-            if(carousel){
+            if(displayArea){
                 products[category].forEach(product => {
                     const card = createProductCard(product, category);
-                    carousel.appendChild(card);
+                    displayArea.appendChild(card);
                 })
             }
             else{
-                console.warn(`No carousel container for ${category}`)
+                console.warn(`No container found for ${category}`)
             }
         }
     } catch (error) {

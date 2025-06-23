@@ -1,55 +1,62 @@
-* {
+main {
     box-sizing: border-box;
+    max-width: 95%;
 }
 
 .form_info{
     margin-top: 20px;
     display: flex;
-    flex-direction: column; /* Um embaixo do outro */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center;     /* Centraliza horizontalmente */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
     text-align: center;
 }
 
-.container {
+main .container {
     max-width: 1000px;
     margin: auto;
-    padding: 30px;
 }
 
-h2 {
+main h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-form{
+main form{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.container input{
+main .container input{
     padding: 10px;
     border: 1px solid #ccc;
-    width: 100%;
+    width: 95%;
 }
 
-label{
+main label{
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input[type="submit"]{
+main input[type="submit"]{
     background-color: #e2e2c5;
     color: #000;
     border: none;
+    margin: 10px auto;
 }
 
 input[type="submit"]:hover{
-    background-color:#bebea1 ;
+    background-color:#bebea1;
 }
 
 .form-group-1{
     flex: 1 1 100%;
+}
+
+.error_message {
+    font-size: 0.9rem;
+    color: red;
+    margin-top: 4px;
 }
 

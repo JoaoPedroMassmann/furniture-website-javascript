@@ -127,7 +127,7 @@ header .logo_container{
     margin: auto;
 }
 
-.showcase_carousel i, .product_carousel i{
+.showcase_carousel i{
     height: 50px;
     width: 30px;
     background-color: #fff;
@@ -141,7 +141,7 @@ header .logo_container{
     position: absolute;
 }
 
-.showcase_carousel i:last-child, .product_carousel i:last-child{
+.showcase_carousel i:last-child{
     right: 0px;
 }
 
@@ -180,29 +180,27 @@ header .logo_container{
     object-fit: cover;
 }
 
-.product_carousel{
+.product_display_area{
     position: relative;
     width: 95%;
     margin: auto;
-}
-
-.product_carousel .carousel{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc(100% / 3.5);
-    gap: 16px;
-    overflow-x: auto;
+    overflow: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
 }
 
-.product_carousel .color_selector{
+.product_display_area .products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 16px 0;
+}
+
+.product_display_area .color_selector{
     display: flex;
     gap: 8px;
 }
 
-.product_carousel .color_selector label{
+.product_display_area .color_selector label{
     display: flex;
     width: 36px;
     height: 36px;
@@ -220,7 +218,6 @@ header .logo_container{
 
 .product_display img{
     inline-size: 100%;
-    min-height: 250px;
     max-height: 600px;
     object-fit: cover;
 }
@@ -233,18 +230,13 @@ header .logo_container{
     position: relative;
 }
 
-.product_carousel .carousel.dragging > div{
-    cursor: grab;
-    user-select: none;
-}
-
 @media screen and (max-width: 1220px){
     .showcase_carousel .carousel{
         grid-auto-columns: calc(100% / 3);
     }
 
-    .product_carousel .carousel{
-        grid-auto-columns: calc((100% / 2) - 12px);
+    .product_display_area .products{
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -274,14 +266,8 @@ header .logo_container{
         font-style: normal;
         font-size: 24px;
     }    
-
 }
 
-@media screen and (max-width: 500px){
-    .product_carousel .carousel{
-        grid-auto-columns: calc((100% / 1) - 12px);
-    }
-}
 
 @media screen and (max-width: 600px){
     .showcase_carousel .carousel{

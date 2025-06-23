@@ -1,3 +1,5 @@
+import { addToCart } from "./cart.js";
+
 export function renderProductPage(product) {
     const container = document.querySelector(".product_area");
     container.innerHTML = ``;
@@ -28,21 +30,29 @@ export function renderProductPage(product) {
     const imageSelectorDiv = document.createElement("div");
     imageSelectorDiv.className = "image_selector";
 
-    const thumbImagePicture = document.createElement("picture");
+    product.images.gallery.forEach((img) =>{
+        const thumbPicture = document.createElement("picture")
 
-    const thumbImageSource = document.createElement("source")
-    thumbImageSource.srcset = product.images.avif;
-    thumbImageSource.type = "image/avif";
+        const thumbSource = document.createElement("source");
+        thumbSource.srcset = img.avif;
+        thumbSource.type = "image/avif";
 
-    const thumbImageImg = document.createElement("img");
-    thumbImageImg.src = product.images.main;
-    thumbImageImg.alt = `${product.name} thumbnail`;
-    thumbImageImg.loading = 'lazy';
-    thumbImageImg.draggable = false;
+        const thumbImg = document.createElement("img");
+        thumbImg.src = img.main;
+        thumbImg.alt = `${product.name} image thumbnail`;
+        thumbImg.loading = 'lazy';
+        thumbImg.draggable = false;
 
-    thumbImagePicture.appendChild(thumbImageSource);
-    thumbImagePicture.appendChild(thumbImageImg);
-    imageSelectorDiv.appendChild(thumbImagePicture);
+        thumbImg.addEventListener('click', () => {
+            mainImageSource.srcset = img.avif;
+            mainImageImg.src = imgObj.main;
+        })
+
+        thumbPicture.appendChild(thumbSource);
+        thumbPicture.appendChild(thumbImg);
+        imageSelectorDiv.appendChild(thumbPicture);
+    })
+    
     productDisplayDiv.appendChild(imageSelectorDiv);
 
     //info
@@ -54,40 +64,45 @@ export function renderProductPage(product) {
     categoriesDiv.appendChild(tag);
     productInfoDiv.appendChild(categoriesDiv);
 
-    const title = document.createElement('h1')
+    const title = document.createElement('h2')
     title.className = 'product_name';
     title.innerText = `${product.name} ${product.dimensions || ''}`;
     productInfoDiv.appendChild(title);
 
     const priceDiv = document.createElement("div");
-    const price = document.createElement("span");
-    price.className = "price";
-    price.innerText = product.priceRange;
-    priceDiv.appendChild(price);
-    productInfoDiv.appendChild(priceDiv);
+    const normalPriceP = document.createElement("p");
+    priceDiv.className = ("price");
 
-    const colorTitle = document.createElement("p");
-    colorTitle.innerText = "Select Colour";
+    if (product.pricePromo && product.pricePromo < product.priceNormal) {
+        const promoPriceP = document.createElement('p');
+        promoPriceP.innerText = `$${product.pricePromo.toFixed(2)}`;
+        promoPriceP.style.color = "#8B0000";
+        promoPriceP.style.fontWeight = "bold";
+        priceDiv.appendChild(promoPriceP);
+        
+        normalPriceP.innerText = `$${product.priceNormal.toFixed(2)}`;
+        normalPriceP.style.color = "gray";
+        normalPriceP.style.textDecoration = "line-through";
+        normalPriceP.style.fontSize = "0.9em";
+        priceDiv.appendChild(normalPriceP);
 
-    const colorSelector = document.createElement("div");
-    colorSelector.className = "color_selector";
+    }
 
-    product.colors.forEach((colorSrc, index) => {
-        const input = document.createElement("input");
-        input.type = "radio";
-        input.name = `color_${product.id}`;
-        input.id = `color_${product.id}_${index}`;
-        input.hidden = true;
-        if(index === 0) input.checked = true;
+    else{
+        const normalPriceP = document.createElement("p");
+        normalPriceP.innerText = `$${product.priceNormal.toFixed(2)}`;
+        priceDiv.appendChild(normalPriceP);
+    }
 
-        const label = document.createElement("label");
-        label.setAttribute("for", input.id);
-        label.style.backgroundImage = `url(${colorSrc})`
+    productInfoDiv.appendChild(priceDiv)
 
-        colorSelector.appendChild(input);
-        colorSelector.appendChild(label);
-    })
-    productInfoDiv.appendChild(colorSelector);
+    const paymentP = document.createElement('p');
+    paymentP.innerText = "Up to 12x installments without interest";
+    productInfoDiv.appendChild(paymentP);
+
+    const desc = document.createElement('p');
+    desc.innerText = product.description;
+    productInfoDiv.appendChild(desc);
 
     const deliveryTitle = document.createElement("p");
     deliveryTitle.innerText = "Check Delivery Fees:";
@@ -104,23 +119,82 @@ export function renderProductPage(product) {
     deliveryDiv.appendChild(deliveryInput);
     productInfoDiv.appendChild(deliveryDiv);
 
-    const codeDiv = document.createElement("div");
-    codeDiv.classname = "product_code";
+    const quantityP = document.createElement('p');
+    quantityP.innerText = "Select Quantity:"
+
+    const quantityDiv = document.createElement('div');
+    quantityDiv.className = 'quantity_selector';
+
+    const minusButton = document.createElement('button');
+    minusButton.innerText = '-';
+
+    const quantityInput = document.createElement('input');
+    quantityInput.type = 'number';
+    quantityInput.value = 1;
+    quantityInput.min = 1;
+
+    const plusButton = document.createElement('button');
+    plusButton.innerText = '+';
+
+    minusButton.addEventListener('click', () =>{
+        let value = parseInt(quantityInput.value);
+        if (value > 1) quantityInput.value = value - 1
+    })
+
+    plusButton.addEventListener('click', () =>{
+        let value = parseInt(quantityInput.value);
+    quantityInput.value = value + 1;
+    })
+
+    quantityDiv.appendChild(minusButton);
+    quantityDiv.appendChild(quantityInput);
+    quantityDiv.appendChild(plusButton);
+    productInfoDiv.appendChild(quantityP);
+    productInfoDiv.appendChild(quantityDiv);
+
     const codeP = document.createElement("p");
-    codeP.innerText = "Product Code: ";
-    const codeB = document.createElement("strong");
-    codeB.innerText = product.id;
-    codeDiv.appendChild(codeP);
-    codeDiv.appendChild(codeB);
-    productInfoDiv.appendChild(codeDiv);
+    codeP.className = "product_code";
+    codeP.innerText = `Product Code: ${product.code}`;
+    productInfoDiv.appendChild(codeP);
+
+    const paymentTypeP = document.createElement('p');
+    paymentTypeP.innerText = "Payment methods available:"
+
+    const paymentMethodsDiv = document.createElement('div');
+    paymentMethodsDiv.className = "payment_methods";
+
+    const paymentIcons = [
+        { src: 'IMG/payment/Mastercard.svg', alt: 'Mastercard' },
+        { src: 'IMG/payment/Visa.svg', alt: 'Visa' },
+        { src: 'IMG/payment/Amex.svg', alt: 'American Express' },
+        { src: 'IMG/payment/Discover.svg', alt: 'Discover' },
+        { src: 'IMG/payment/DinersClub.svg', alt: 'Diners Club' },
+        { src: 'IMG/payment/Elo.svg', alt: 'Elo' },
+        { src: 'IMG/payment/Affirm.svg', alt: 'Affirm' }
+    ];
+
+    paymentIcons.forEach(icon => {
+        const img = document.createElement('img');
+        img.src = icon.src;
+        img.alt = icon.alt;
+        paymentMethodsDiv.appendChild(img);
+    });
+
+    productInfoDiv.appendChild(paymentTypeP)
+    productInfoDiv.appendChild(paymentMethodsDiv);
 
     const buttonAddCart = document.createElement("button");
     buttonAddCart.type = "button";
     buttonAddCart.innerText = "Add To Cart";
-    buttonAddCart.className = "btn btn-secondary";
+    buttonAddCart.className = "add_cart";
+
+    buttonAddCart.addEventListener('click', () => {
+        const quantity = parseInt(quantityInput.value);
+        addToCart(product, quantity);
+    });
+    
     productInfoDiv.appendChild(buttonAddCart);
 
-   container.appendChild(productDisplayDiv);
-   container.appendChild(productInfoDiv);
-
+    container.appendChild(productDisplayDiv);
+    container.appendChild(productInfoDiv);
 }

@@ -1,0 +1,87 @@
+.cart_area{
+    width: 95%;
+    margin: 60px auto;;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.cart_item{
+    display: flex; 
+    margin: 10px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.cart_item img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    min-width: 30px;
+    width: 30%;
+}
+
+.quantity_selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.quantity_selector button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.quantity_selector button:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity_selector input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 32px;
+}
+
+.delete_button {
+    background-color: #d9534f;
+
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.delete_button:hover {
+    background-color: #c9302c;
+}
+
+.buy_button, .clear_button{
+    padding: 12px;
+    text-align: center;
+    height: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    margin-right: 10px;
+}
+
+button:hover{
+    background-color: #404040;
+}
+

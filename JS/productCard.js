@@ -11,7 +11,6 @@ export function createProductCard(product, category){
     //wrapper
     const imageWrapper = document.createElement("div");
     imageWrapper.className = "product_image_wrapper";
-    imageWrapper.style.backgroundImage = `url(${product.images.fallback})`
 
     const picture = document.createElement("picture");
 
@@ -30,27 +29,6 @@ export function createProductCard(product, category){
     imageWrapper.appendChild(picture);
     productDiv.appendChild(imageWrapper);
 
-    //color selector
-    const colorSelector = document.createElement("div");
-    colorSelector.className = "color_selector";
-
-    product.colors.forEach((colorSrc, index) => {
-        const input = document.createElement("input");
-        input.type = "radio";
-        input.name = `color_${product.id}`;
-        input.id = `color_${product.id}_${index}`;
-        input.hidden = true;
-
-        const label = document.createElement("label");
-        label.setAttribute("for", input.id);
-        label.style.backgroundImage = `url(${colorSrc})`;
-
-        colorSelector.appendChild(input);
-        colorSelector.appendChild(label);
-    });
-
-    productDiv.appendChild(colorSelector);
-
     const infoDiv = document.createElement("div");
     
     const tag = document.createElement("b");
@@ -59,12 +37,32 @@ export function createProductCard(product, category){
     const title = document.createElement("p")
     title.innerText = product.name + " " + product.dimensions;
 
-    const priceRange = document.createElement("p");
-    priceRange.innerText = product.priceRange;
+    const priceDiv = document.createElement("div");
+    const normalPriceP = document.createElement("p");
+    priceDiv.className = ("price");
+
+    if (product.pricePromo && product.pricePromo < product.priceNormal) {
+        const promoPriceP = document.createElement('p');
+        promoPriceP.innerText = `$${product.pricePromo.toFixed(2)}`;
+        promoPriceP.style.color = "#8B0000";
+        promoPriceP.style.fontWeight = "bold";
+        priceDiv.appendChild(promoPriceP);
+        
+        normalPriceP.innerText = `$${product.priceNormal.toFixed(2)}`;
+        normalPriceP.style.color = "gray";
+        normalPriceP.style.textDecoration = "line-through";
+        normalPriceP.style.fontSize = "0.9em";
+        priceDiv.appendChild(normalPriceP);
+    }
+
+    else{
+        normalPriceP.innerText = `$${product.pricePromo.toFixed(2)}`;
+        priceDiv.appendChild(normalPriceP);
+    }
 
     infoDiv.appendChild(tag);
     infoDiv.appendChild(title);
-    infoDiv.appendChild(priceRange);
+    infoDiv.appendChild(priceDiv);
     
     productDiv.appendChild(infoDiv);
 
