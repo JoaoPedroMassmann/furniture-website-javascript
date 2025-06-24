@@ -1,10 +1,6 @@
 export function addToCart(product, quantity){
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    const unitPrice = (product.pricePromo != null && product.pricePromo < product.priceNormal)
-        ? product.pricePromo
-        : product.priceNormal;
-
     const existingProduct = cart.find(item => item.id == product.id);
 
     if(existingProduct){
